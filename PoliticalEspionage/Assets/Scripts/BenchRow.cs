@@ -6,14 +6,17 @@ using UnityEngine;
 public class BenchRow : MonoBehaviour
 {
     private int maxSpots = 6;
-    public List<int> seatsTaken = new List<int>();
+    public Seat[] Seats;
 
-    public Transform aisle;
+    public Transform aisleLeft;
+    public Transform aisleRight;
 
-    public Transform[] Seat1;
-    public Transform[] Seat2;
-    public Transform[] Seat3;
-    public Transform[] Seat4;
-    public Transform[] Seat5;
-    public Transform[] Seat6;
+    // Might not be necessary
+    [System.Serializable]
+    public struct Seat
+    {
+        public bool occupied;
+        public Transform TargetA;
+        public Transform TargetB;
+    }
 }

@@ -13,44 +13,23 @@ public class BenchRowManager : MonoBehaviour
         else instance = this;
     }
 
-    IEnumerator ValidateSeat()
+    public bool SeatsAreAvailable(BenchRow bench)
     {
-        BenchRow bench = null;
-
-        // Get a bench with seats
-        bool validateBench = true;
-        while (validateBench)
+        for(int i=0; i<bench.Seats.Length; i++)
         {
-            int r = Random.Range(0, benches.Count);
-            if (SeatsAreAvailable(benches[r]))
-            {
-                bench = benches[r];
-                validateBench = false;
-            }
+            if (bench.Seats[i].occupied) continue;
+            else return true;
         }
-
-        bool validateSeat = true;
-        while (validateSeat)
-        {
-            int r = Random.Range(0, 6);
-            if (SeatNotTaken(r, bench))
-            {
-
-            }
-        }
-
-        yield return null;
+        return false;
     }
 
-    private bool SeatsAreAvailable(BenchRow bench)
+    public bool SeatTaken(int seat, BenchRow bench)
     {
-        if (bench.seatsTaken.Count == 6) return false;
+        if (bench.Seats[seat].occupied == false)
+        {
+            bench.Seats[seat].occupied = true;
+            return false;
+        }
         else return true;
-    }
-
-    private bool SeatNotTaken(int seat, BenchRow bench)
-    {
-        if (bench.seatsTaken.Contains(seat) == false) return true;
-        else return false;
     }
 }
