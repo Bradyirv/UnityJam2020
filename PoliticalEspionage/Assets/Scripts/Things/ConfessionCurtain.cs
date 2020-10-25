@@ -9,6 +9,7 @@ public class ConfessionCurtain : MonoBehaviour
     private Vector3 originalScale;
     public float speed = 1.5f;
     public float targetScaleX;
+    public AudioSource source;
 
     bool Open;
     bool moveToOriginalPosition = false;
@@ -25,6 +26,7 @@ public class ConfessionCurtain : MonoBehaviour
     public void OpenCurtain()
     {
         Open = true;
+        source.Play();
     }
 
     private void Update()
@@ -38,6 +40,7 @@ public class ConfessionCurtain : MonoBehaviour
                     timeOpen = 0;
                     Open = false;
                     moveToOriginalPosition = true;
+                    source.Play();
                 }
                 else
                 {
