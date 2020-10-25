@@ -1,23 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 using Daybrayk;
 public class CharacterInteraction : MonoBehaviour
 {
+    public UnityEventBool onInteractTarget;
     IInteractable interactionTarget;
     PlayerInput playerInput;
     private void OnEnable()
     {
         if (playerInput == null) playerInput = GetComponent<PlayerInput>();
         playerInput.actions.FindAction("Interact").started += HandleAction;
-        //playerInput.onActionTriggered += HandleAction;
     }
 
     private void OnDisable()
     {
-        //playerInput.onActionTriggered -= HandleAction;
         playerInput.actions.FindAction("Interact").started -= HandleAction;
     }
 
@@ -30,13 +30,21 @@ public class CharacterInteraction : MonoBehaviour
     {
         IInteractable interactable = other.GetComponent<IInteractable>();
 
-        if (interactable != null) interactionTarget = interactable;
+        if (interactable != null)
+        {
+            interactionTarget = interactable;
+            onInteractTarget.TryInvoke(true);
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
         IInteractable interactable = other.GetComponent<IInteractable>();
 
-        if (interactable != null) interactionTarget = null;
+        if (interactable != null)
+        {
+            interactionTarget = null;
+            onInteractTarget.TryInvoke(false);
+        }
     }
 }

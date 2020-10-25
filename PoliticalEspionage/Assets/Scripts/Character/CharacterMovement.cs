@@ -26,7 +26,7 @@ public class CharacterMovement : MonoBehaviour
     }
     void Update()
     {
-        controller.Move(transform.forward * movementAxis.z * Time.deltaTime);
+        controller.Move((transform.forward * movementAxis.z).WithY(Physics.gravity.y) * Time.deltaTime);
         transform.Rotate(Vector3.up * movementAxis.x * Time.deltaTime);
         //if(movementAxis.WithY(0).sqrMagnitude > 0) transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(movementAxis.WithY(0)), angularSpeed * Time.deltaTime);
     }
