@@ -6,11 +6,24 @@ public class Bell : MonoBehaviour, IInteractable
 {
     public AudioClip sound;
     public AudioSource source;
+    public BoxCollider trigger;
+
+    private void Start()
+    {
+        ConfessionManager.onConfessionFinish += ActivateTrigger;
+    }
 
     public void Interact()
     {
-        Debug.Log("Bell");
-        source.PlayOneShot(sound);
-        AIManager.instance.CalledForNextAI();
+        if (AIManager.instance.CalledForNextAI())
+        {
+            source.PlayOneShot(sound);
+            trigger.enabled = false;
+        }
+    }
+
+    public void ActivateTrigger()
+    {
+        trigger.enabled = true;
     }
 }

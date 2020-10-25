@@ -9,6 +9,8 @@ public class SMB_WalkToSeat : StateMachineBehaviour
     private Transform targetB;
     private Transform targetC;
     private bool AComplete = false;
+    private bool BComplete = false;
+    private bool CComplete = false;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -39,26 +41,31 @@ public class SMB_WalkToSeat : StateMachineBehaviour
                 {
                     if (Vector3.Distance(me.transform.position, me.agent.pathEndPosition) < 0.2f)
                     {
+                        Debug.Log("Animator state trigger from TO Bench");
                         if (me.agent.isOnNavMesh) me.agent.destination = targetB.position;
                         AComplete = true;
                     }
                 }
-                else
+                else if (BComplete == false)
                 {
                     if (Vector3.Distance(me.transform.position, me.agent.pathEndPosition) < 0.2f)
                     {
+                        Debug.Log("Animator state trigger from TO Seat");
                         me.transform.forward = targetB.forward;
                         animator.SetTrigger("NextState");
+                        BComplete = true;
                     }
                 }
             }
-            else
+            else if(CComplete == false)
             {
                 me.agent.destination = targetC.position;
                 if (Vector3.Distance(me.transform.position, me.agent.pathEndPosition) < 0.2f)
                 {
+                    Debug.Log("Animator state trigger from TO Confession");
                     me.transform.forward = targetB.forward;
                     animator.SetTrigger("NextState");
+                    CComplete = true;
                 }
             }
         }

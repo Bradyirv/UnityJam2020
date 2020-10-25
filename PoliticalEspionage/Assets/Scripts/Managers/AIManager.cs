@@ -25,6 +25,10 @@ public class AIManager : MonoBehaviour
     [SerializeField] List<AI> AIInformation = new List<AI>();
     private string[] clans = {"Frigg", "Thor", "Loki", "Balder", "Hod", "Heimdall", "Tyr"};
 
+    public int maxAI;
+    public float spawnTimer;
+    private float timeSinceLast;
+
     public Dictionary<int, GameObject> preGeneratedAI = new Dictionary<int, GameObject>();
     int numAI;
 
@@ -110,6 +114,18 @@ public class AIManager : MonoBehaviour
             currentPrayerCompleted = false;
         }
 
+        //if(waitingAI.Count != maxAI)
+        //{
+        //    if(timeSinceLast >= spawnTimer)
+        //    {
+        //        timeSinceLast = 0;
+        //        SetActiveAI();
+        //    }
+        //    else
+        //    {
+        //        timeSinceLast += Time.deltaTime;
+        //    }
+        //}
     }
 
     public void SpawnAI()
@@ -141,20 +157,35 @@ public class AIManager : MonoBehaviour
         targetOfTheAssassination.transform.forward = AISpawnLocation.forward;
     }
 
-    public void CalledForNextAI()
+    public bool CalledForNextAI()
     {
         if(waitingAI.Count > 0)
         {
-            currentAI = waitingAI[0];
-            currentAI.callForPrayer();
-            waitingAI.Remove(currentAI);
+            if(currentAI != null)
+            {
+                if(currentAI.madePrayer)
+                {
+                    currentAI = waitingAI[0];
+                    currentAI.callForPrayer();
+                    waitingAI.Remove(currentAI);
+                    return true;
+                }
+            }
+            else
+            {
+                currentAI = waitingAI[0];
+                currentAI.callForPrayer();
+                waitingAI.Remove(currentAI);
+                return true;
+            }
         }
+        return false;
     }
 
     public void CompleteCurrentAIPrayer()
     {
-        currentAI.madePrayer = true;
         if (currentAI != null)  {
+            currentAI.madePrayer = true;
             currentAI.CompletedPrayer();
         }
     }
