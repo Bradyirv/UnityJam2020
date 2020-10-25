@@ -202,7 +202,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &158014371
 PrefabInstance:
@@ -289,7 +289,7 @@ PrefabInstance:
     - target: {fileID: 8396189906257991933, guid: e05c1d1509a2d2843b20ad4d49066caf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8396189906257991933, guid: e05c1d1509a2d2843b20ad4d49066caf,
         type: 3}
@@ -408,7 +408,7 @@ PrefabInstance:
     - target: {fileID: 8396189906257991933, guid: e05c1d1509a2d2843b20ad4d49066caf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8396189906257991933, guid: e05c1d1509a2d2843b20ad4d49066caf,
         type: 3}
@@ -455,7 +455,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4896282655554922, guid: 7046122174d85054c83afb16650695ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4896282655554922, guid: 7046122174d85054c83afb16650695ed, type: 3}
       propertyPath: m_LocalPosition.y
@@ -463,7 +463,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4896282655554922, guid: 7046122174d85054c83afb16650695ed, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.25600004
+      value: -0.39
       objectReference: {fileID: 0}
     - target: {fileID: 4896282655554922, guid: 7046122174d85054c83afb16650695ed, type: 3}
       propertyPath: m_LocalRotation.x
@@ -535,77 +535,74 @@ Transform:
   m_Children:
   - {fileID: 518982011}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1358990365
-PrefabInstance:
+--- !u!1 &1296031137
+GameObject:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4910030663666908762, guid: 53c8d0c39f2bd04479a7d4c36218cf0f,
-        type: 3}
-      propertyPath: m_Name
-      value: AIPrefab
-      objectReference: {fileID: 0}
-    - target: {fileID: 4910030663666908763, guid: 53c8d0c39f2bd04479a7d4c36218cf0f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.57606936
-      objectReference: {fileID: 0}
-    - target: {fileID: 4910030663666908763, guid: 53c8d0c39f2bd04479a7d4c36218cf0f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -14.764202
-      objectReference: {fileID: 0}
-    - target: {fileID: 4910030663666908763, guid: 53c8d0c39f2bd04479a7d4c36218cf0f,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 6.0882077
-      objectReference: {fileID: 0}
-    - target: {fileID: 4910030663666908763, guid: 53c8d0c39f2bd04479a7d4c36218cf0f,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4910030663666908763, guid: 53c8d0c39f2bd04479a7d4c36218cf0f,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4910030663666908763, guid: 53c8d0c39f2bd04479a7d4c36218cf0f,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4910030663666908763, guid: 53c8d0c39f2bd04479a7d4c36218cf0f,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4910030663666908763, guid: 53c8d0c39f2bd04479a7d4c36218cf0f,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4910030663666908763, guid: 53c8d0c39f2bd04479a7d4c36218cf0f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4910030663666908763, guid: 53c8d0c39f2bd04479a7d4c36218cf0f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4910030663666908763, guid: 53c8d0c39f2bd04479a7d4c36218cf0f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 53c8d0c39f2bd04479a7d4c36218cf0f, type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1296031140}
+  - component: {fileID: 1296031139}
+  - component: {fileID: 1296031138}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1296031138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296031137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &1296031139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296031137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &1296031140
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296031137}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1393309367 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7804661429296493585, guid: e05c1d1509a2d2843b20ad4d49066caf,
@@ -646,7 +643,37 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1609166634
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1609166635}
+  m_Layer: 0
+  m_Name: AllTheAI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1609166635
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609166634}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2106732773}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1794424514
 GameObject:
@@ -753,11 +780,11 @@ GameObject:
   - component: {fileID: 1858767188}
   - component: {fileID: 1858767187}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 8
+  m_StaticEditorFlags: 4294967263
   m_IsActive: 1
 --- !u!65 &1858767187
 BoxCollider:
@@ -945,7 +972,7 @@ PrefabInstance:
     - target: {fileID: 8396189906257991933, guid: e05c1d1509a2d2843b20ad4d49066caf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8396189906257991933, guid: e05c1d1509a2d2843b20ad4d49066caf,
         type: 3}
@@ -1006,6 +1033,7 @@ GameObject:
   - component: {fileID: 2106732775}
   - component: {fileID: 2106732774}
   - component: {fileID: 2106732776}
+  - component: {fileID: 2106732777}
   m_Layer: 0
   m_Name: GameManagers
   m_TagString: Untagged
@@ -1023,9 +1051,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.5654528, y: -12.17306, z: 12.511059}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1609166635}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2106732774
 MonoBehaviour:
@@ -1055,12 +1084,370 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c64d90aeb7e77b4a9b19e977545345f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeAI: []
+  waitingAI: []
+  currentAI: {fileID: 0}
   AISpawnLocation: {fileID: 1399914979}
   confessionSeatLocation: {fileID: 1149819617}
   AIPrefab: {fileID: 4910030663666908762, guid: 53c8d0c39f2bd04479a7d4c36218cf0f,
     type: 3}
+  AIHeirarchyLocation: {fileID: 1609166635}
+  spawnAtStart: 1
   spawnAnAITest: 0
+  callNextAIForPrayer: 0
+  currentPrayerCompleted: 0
+  namesPerClan: 10
+  regenerateNames: 0
+  AIInformation:
+  - id: 0
+    first: Adam
+    last: Wong
+    clan: Frigg
+    timesVisited: 0
+  - id: 1
+    first: Jeremy
+    last: Brar
+    clan: Frigg
+    timesVisited: 0
+  - id: 2
+    first: Oliver
+    last: Ross
+    clan: Frigg
+    timesVisited: 0
+  - id: 3
+    first: Carter
+    last: Lo
+    clan: Frigg
+    timesVisited: 0
+  - id: 4
+    first: Felix
+    last: Scott
+    clan: Frigg
+    timesVisited: 0
+  - id: 5
+    first: Justin
+    last: Lo
+    clan: Frigg
+    timesVisited: 0
+  - id: 6
+    first: Aiden
+    last: Chow
+    clan: Frigg
+    timesVisited: 0
+  - id: 7
+    first: Adam
+    last: "B\xE9langer"
+    clan: Frigg
+    timesVisited: 0
+  - id: 8
+    first: Philip
+    last: Gauthier
+    clan: Frigg
+    timesVisited: 0
+  - id: 9
+    first: Jayden
+    last: Fortin
+    clan: Frigg
+    timesVisited: 0
+  - id: 10
+    first: Maxime
+    last: Ennis
+    clan: Thor
+    timesVisited: 0
+  - id: 11
+    first: Theo
+    last: Campbell
+    clan: Thor
+    timesVisited: 0
+  - id: 12
+    first: Maxime
+    last: Abraham
+    clan: Thor
+    timesVisited: 0
+  - id: 13
+    first: Samuel
+    last: White
+    clan: Thor
+    timesVisited: 0
+  - id: 14
+    first: Emile
+    last: Taylor
+    clan: Thor
+    timesVisited: 0
+  - id: 15
+    first: Dominic
+    last: Liu
+    clan: Thor
+    timesVisited: 0
+  - id: 16
+    first: Zackary
+    last: Martin
+    clan: Thor
+    timesVisited: 0
+  - id: 17
+    first: Mason
+    last: Barnaby
+    clan: Thor
+    timesVisited: 0
+  - id: 18
+    first: Lucas
+    last: Mitchell
+    clan: Thor
+    timesVisited: 0
+  - id: 19
+    first: Malik
+    last: Tremblay
+    clan: Thor
+    timesVisited: 0
+  - id: 20
+    first: Theo
+    last: "L\xE9vesque"
+    clan: Loki
+    timesVisited: 0
+  - id: 21
+    first: Nathan
+    last: Roy
+    clan: Loki
+    timesVisited: 0
+  - id: 22
+    first: Elliot
+    last: Wilson
+    clan: Loki
+    timesVisited: 0
+  - id: 23
+    first: Arnaud
+    last: Campbell
+    clan: Loki
+    timesVisited: 0
+  - id: 24
+    first: Philippe
+    last: Abraham
+    clan: Loki
+    timesVisited: 0
+  - id: 25
+    first: Liam
+    last: White
+    clan: Loki
+    timesVisited: 0
+  - id: 26
+    first: Bently
+    last: Wong
+    clan: Loki
+    timesVisited: 0
+  - id: 27
+    first: Jeremy
+    last: Harris
+    clan: Loki
+    timesVisited: 0
+  - id: 28
+    first: Aiden
+    last: Harris
+    clan: Loki
+    timesVisited: 0
+  - id: 29
+    first: Dylan
+    last: Martin
+    clan: Loki
+    timesVisited: 0
+  - id: 30
+    first: Vincent
+    last: Barnaby
+    clan: Balder
+    timesVisited: 0
+  - id: 31
+    first: Felix
+    last: Jones
+    clan: Balder
+    timesVisited: 0
+  - id: 32
+    first: Philippe
+    last: Thompson
+    clan: Balder
+    timesVisited: 0
+  - id: 33
+    first: Dominic
+    last: Novak
+    clan: Balder
+    timesVisited: 0
+  - id: 34
+    first: Anthony
+    last: Harcourt
+    clan: Balder
+    timesVisited: 0
+  - id: 35
+    first: Anthony
+    last: Gill
+    clan: Balder
+    timesVisited: 0
+  - id: 36
+    first: Victor
+    last: Roy
+    clan: Balder
+    timesVisited: 0
+  - id: 37
+    first: Gabriel
+    last: Mackay
+    clan: Balder
+    timesVisited: 0
+  - id: 38
+    first: Vincent
+    last: Lam
+    clan: Balder
+    timesVisited: 0
+  - id: 39
+    first: Elliot
+    last: Ginnish
+    clan: Balder
+    timesVisited: 0
+  - id: 40
+    first: Charles
+    last: Harris
+    clan: Hod
+    timesVisited: 0
+  - id: 41
+    first: Mathis
+    last: "C\xF4t\xE9"
+    clan: Hod
+    timesVisited: 0
+  - id: 42
+    first: Anthony
+    last: Morin
+    clan: Hod
+    timesVisited: 0
+  - id: 43
+    first: Logan
+    last: Macdonald
+    clan: Hod
+    timesVisited: 0
+  - id: 44
+    first: Xavier
+    last: Mitchell
+    clan: Hod
+    timesVisited: 0
+  - id: 45
+    first: Philip
+    last: "C\xF4t\xE9"
+    clan: Hod
+    timesVisited: 0
+  - id: 46
+    first: Daniel
+    last: Mitchell
+    clan: Hod
+    timesVisited: 0
+  - id: 47
+    first: Louis
+    last: "L\xE9vesque"
+    clan: Hod
+    timesVisited: 0
+  - id: 48
+    first: Simon
+    last: Brar
+    clan: Hod
+    timesVisited: 0
+  - id: 49
+    first: Carter
+    last: Gauthier
+    clan: Hod
+    timesVisited: 0
+  - id: 50
+    first: Victor
+    last: Lavigne
+    clan: Heimdall
+    timesVisited: 0
+  - id: 51
+    first: William
+    last: Jones
+    clan: Heimdall
+    timesVisited: 0
+  - id: 52
+    first: James
+    last: Ouellet
+    clan: Heimdall
+    timesVisited: 0
+  - id: 53
+    first: Ryder
+    last: Chan
+    clan: Heimdall
+    timesVisited: 0
+  - id: 54
+    first: Alexandre
+    last: Claire
+    clan: Heimdall
+    timesVisited: 0
+  - id: 55
+    first: Daniel
+    last: Mackay
+    clan: Heimdall
+    timesVisited: 0
+  - id: 56
+    first: Malik
+    last: Claire
+    clan: Heimdall
+    timesVisited: 0
+  - id: 57
+    first: Jacob
+    last: Smith
+    clan: Heimdall
+    timesVisited: 0
+  - id: 58
+    first: Matthew
+    last: Lavoie
+    clan: Heimdall
+    timesVisited: 0
+  - id: 59
+    first: Liam
+    last: Thompson
+    clan: Heimdall
+    timesVisited: 0
+  - id: 60
+    first: Adam
+    last: Ambrose
+    clan: Tyr
+    timesVisited: 0
+  - id: 61
+    first: Thomas
+    last: Lavoie
+    clan: Tyr
+    timesVisited: 0
+  - id: 62
+    first: Bently
+    last: Addy
+    clan: Tyr
+    timesVisited: 0
+  - id: 63
+    first: Philip
+    last: Grewal
+    clan: Tyr
+    timesVisited: 0
+  - id: 64
+    first: Arthur
+    last: Chow
+    clan: Tyr
+    timesVisited: 0
+  - id: 65
+    first: Aiden
+    last: Chan
+    clan: Tyr
+    timesVisited: 0
+  - id: 66
+    first: Dylan
+    last: Andersen
+    clan: Tyr
+    timesVisited: 0
+  - id: 67
+    first: Jeremy
+    last: Ginnish
+    clan: Tyr
+    timesVisited: 0
+  - id: 68
+    first: Matthew
+    last: Walker
+    clan: Tyr
+    timesVisited: 0
+  - id: 69
+    first: Gabriel
+    last: Brown
+    clan: Tyr
+    timesVisited: 0
 --- !u!114 &2106732776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1074,6 +1461,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   footstep: {fileID: 0}
+--- !u!114 &2106732777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106732772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a458d5e772d62240a10aecaddb45f68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2145182250 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7804661429296493585, guid: e05c1d1509a2d2843b20ad4d49066caf,
@@ -1086,3 +1485,77 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4971b0bed6aec2f4faf62a2d707ffb29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &9056369792053513435
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4910030663666908762, guid: 53c8d0c39f2bd04479a7d4c36218cf0f,
+        type: 3}
+      propertyPath: m_Name
+      value: AIPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910030663666908762, guid: 53c8d0c39f2bd04479a7d4c36218cf0f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910030663666908763, guid: 53c8d0c39f2bd04479a7d4c36218cf0f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910030663666908763, guid: 53c8d0c39f2bd04479a7d4c36218cf0f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910030663666908763, guid: 53c8d0c39f2bd04479a7d4c36218cf0f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -18.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910030663666908763, guid: 53c8d0c39f2bd04479a7d4c36218cf0f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910030663666908763, guid: 53c8d0c39f2bd04479a7d4c36218cf0f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910030663666908763, guid: 53c8d0c39f2bd04479a7d4c36218cf0f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910030663666908763, guid: 53c8d0c39f2bd04479a7d4c36218cf0f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910030663666908763, guid: 53c8d0c39f2bd04479a7d4c36218cf0f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910030663666908763, guid: 53c8d0c39f2bd04479a7d4c36218cf0f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910030663666908763, guid: 53c8d0c39f2bd04479a7d4c36218cf0f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910030663666908763, guid: 53c8d0c39f2bd04479a7d4c36218cf0f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 53c8d0c39f2bd04479a7d4c36218cf0f, type: 3}

@@ -23,7 +23,6 @@ public class SMB_LookForSeat : StateMachineBehaviour
         if (me.myBench == null)
         {
             int r = Random.Range(0, BenchRowManager.instance.benches.Count);
-            Debug.Log(r);
             if (BenchRowManager.instance.SeatsAreAvailable(BenchRowManager.instance.benches[r]))
             {
                 me.myBench = BenchRowManager.instance.benches[r];
@@ -35,7 +34,6 @@ public class SMB_LookForSeat : StateMachineBehaviour
             if(foundOpenSeat == false)
             {
                 int r = Random.Range(0, 6);
-                Debug.Log(r);
                 if (BenchRowManager.instance.SeatTaken(r, me.myBench) == false)
                 {
                     me.mySeat = r;
