@@ -11,13 +11,13 @@ public class AITriggerEvents : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //if (other.GetComponent<AIBehaviour>() == null) return;
+        if (other.GetComponent<AIBehaviour>() == null) return;
         if (onTriggerEnter != null) onTriggerEnter.Invoke(other.gameObject);
     }
 
     private void OnTriggerExit(Collider other)
     {
-        //if (other.GetComponent<AIBehaviour>() == null) return;
+        if (other.GetComponent<AIBehaviour>() == null) return;
         onTriggerExit.TryInvoke(null);
     }
 }
