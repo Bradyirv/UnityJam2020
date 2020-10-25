@@ -11,7 +11,7 @@ public class ConfessionManager : MonoBehaviour
     public static event System.Action onConfessionFinish;
 
     [SerializeField]
-    FloatReference secretAccumulator;
+    IntReference secretAccumulator;
 
     public CharacterRoot root { get; set; }
 
