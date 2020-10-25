@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
+using Daybrayk;
 public class Bell : MonoBehaviour, IInteractable
 {
+    public UnityEvent onBellInteract;
     public AudioSource source;
     public BoxCollider trigger;
 
@@ -16,6 +19,8 @@ public class Bell : MonoBehaviour, IInteractable
     {
         if (AIManager.instance.CalledForNextAI())
         {
+            trigger.gameObject.SetActive(false);
+            onBellInteract.TryInvoke();
             source.Play();
             trigger.enabled = false;
         }
