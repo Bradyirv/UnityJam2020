@@ -42,7 +42,6 @@ public class SMB_WalkToSeat : StateMachineBehaviour
                     if (me.agent.destination != targetA.position) me.agent.destination = targetA.position;
                     if (Vector3.Distance(me.transform.position, me.agent.destination) < 0.2f)
                     {
-                        Debug.Log("Animator state trigger from TO Bench");
                         AComplete = true;
                     }
                 }
@@ -51,7 +50,6 @@ public class SMB_WalkToSeat : StateMachineBehaviour
                     if (me.agent.destination != targetB.position) me.agent.SetDestination(targetB.position);
                     if (Vector3.Distance(me.transform.position, me.agent.destination) < 0.2f)
                     {
-                        Debug.Log("Animator state trigger from TO Seat");
                         me.transform.forward = targetB.forward;
                         animator.SetTrigger("NextState");
                         BComplete = true;
@@ -63,7 +61,6 @@ public class SMB_WalkToSeat : StateMachineBehaviour
                 if(me.agent.destination != targetC.position) me.agent.SetDestination(targetC.position);
                 if (Vector3.Distance(me.transform.position, me.agent.destination) < 0.2f)
                 {
-                    Debug.Log("Animator state trigger from TO Confession");
                     me.transform.forward = targetC.forward;
                     animator.SetTrigger("NextState");
                     CComplete = true;
