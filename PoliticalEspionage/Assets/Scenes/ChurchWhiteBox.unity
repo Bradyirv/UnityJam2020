@@ -36295,6 +36295,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2388648015622923502, guid: eed1827e5149c0c43928c03c17b8bfb0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5920196770448018854, guid: eed1827e5149c0c43928c03c17b8bfb0,
         type: 3}
       propertyPath: m_textInfo.textComponent
@@ -36304,6 +36309,51 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.materialCount
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5920196770448018854, guid: eed1827e5149c0c43928c03c17b8bfb0,
+        type: 3}
+      propertyPath: m_textAlignment
+      value: 514
+      objectReference: {fileID: 0}
+    - target: {fileID: 5920196770448018854, guid: eed1827e5149c0c43928c03c17b8bfb0,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5920196770448018854, guid: eed1827e5149c0c43928c03c17b8bfb0,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5920196770448018854, guid: eed1827e5149c0c43928c03c17b8bfb0,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5920196770448018854, guid: eed1827e5149c0c43928c03c17b8bfb0,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5920196770448018854, guid: eed1827e5149c0c43928c03c17b8bfb0,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5920196770448018854, guid: eed1827e5149c0c43928c03c17b8bfb0,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5920196770448018854, guid: eed1827e5149c0c43928c03c17b8bfb0,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 5920196770448018854, guid: eed1827e5149c0c43928c03c17b8bfb0,
+        type: 3}
+      propertyPath: m_fontSizeMax
+      value: 35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eed1827e5149c0c43928c03c17b8bfb0, type: 3}
@@ -55291,6 +55341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sound: {fileID: 0}
   source: {fileID: 1608517707031987}
+  trigger: {fileID: 0}
 --- !u!1 &1635678909766233
 GameObject:
   m_ObjectHideFlags: 0

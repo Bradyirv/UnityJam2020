@@ -114,18 +114,18 @@ public class AIManager : MonoBehaviour
             currentPrayerCompleted = false;
         }
 
-        if(waitingAI.Count != maxAI)
-        {
-            if(timeSinceLast >= spawnTimer)
-            {
-                timeSinceLast = 0;
-                SetActiveAI();
-            }
-            else
-            {
-                timeSinceLast += Time.deltaTime;
-            }
-        }
+        //if(waitingAI.Count != maxAI)
+        //{
+        //    if(timeSinceLast >= spawnTimer)
+        //    {
+        //        timeSinceLast = 0;
+        //        SetActiveAI();
+        //    }
+        //    else
+        //    {
+        //        timeSinceLast += Time.deltaTime;
+        //    }
+        //}
     }
 
     public void SpawnAI()
@@ -157,7 +157,7 @@ public class AIManager : MonoBehaviour
         targetOfTheAssassination.transform.forward = AISpawnLocation.forward;
     }
 
-    public void CalledForNextAI()
+    public bool CalledForNextAI()
     {
         if(waitingAI.Count > 0)
         {
@@ -168,6 +168,7 @@ public class AIManager : MonoBehaviour
                     currentAI = waitingAI[0];
                     currentAI.callForPrayer();
                     waitingAI.Remove(currentAI);
+                    return true;
                 }
             }
             else
@@ -175,8 +176,10 @@ public class AIManager : MonoBehaviour
                 currentAI = waitingAI[0];
                 currentAI.callForPrayer();
                 waitingAI.Remove(currentAI);
+                return true;
             }
         }
+        return false;
     }
 
     public void CompleteCurrentAIPrayer()

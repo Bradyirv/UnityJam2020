@@ -30,9 +30,12 @@ public class AIBehaviour : MonoBehaviour
     // Components
     private Animator anim;
     private AudioSource audioSource;
-    public NavMeshAgent agent;
+    [HideInInspector] public NavMeshAgent agent;
     public AIManager.AI myInformation;
     public TextMeshProUGUI NameGUI;
+
+    public Material[] materials;
+    public GameObject[] models;
 
     // Target Locations
     public BenchRow myBench = null;
@@ -52,6 +55,12 @@ public class AIBehaviour : MonoBehaviour
     {
         // Set Namebar
         NameGUI.text = myInformation.first + " " + myInformation.last + "\nof " + myInformation.clan;
+        // Set Character model and material
+        int r = Random.Range(0, 5);
+        models[r].SetActive(true);
+        int r2 = Random.Range(0, materials.Length);
+        models[r].GetComponent<SkinnedMeshRenderer>().sharedMaterial = materials[r2];
+
         // Determine what royalty level can be spawned based on Friar rating
         // Set up how much influence my secret has
         // Assign my secret from a SecretManager (Dialogue for prayer booth)
@@ -60,6 +69,7 @@ public class AIBehaviour : MonoBehaviour
     public void callForPrayer()
     {
         calledForPrayer = true;
+        anim.ResetTrigger("NextState");
         if(!anim.GetCurrentAnimatorStateInfo(0).IsName("GoToSeat"))anim.SetTrigger("NextState");
     }
 
