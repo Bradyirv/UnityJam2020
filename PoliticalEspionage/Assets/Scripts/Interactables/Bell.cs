@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Bell : MonoBehaviour, IInteractable
 {
-    public AudioClip sound;
     public AudioSource source;
     public BoxCollider trigger;
 
@@ -17,7 +16,7 @@ public class Bell : MonoBehaviour, IInteractable
     {
         if (AIManager.instance.CalledForNextAI())
         {
-            source.PlayOneShot(sound);
+            source.Play();
             trigger.enabled = false;
         }
     }
