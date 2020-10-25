@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+
+using Daybrayk;
 public class CharacterInteraction : MonoBehaviour
 {
     IInteractable interactionTarget;

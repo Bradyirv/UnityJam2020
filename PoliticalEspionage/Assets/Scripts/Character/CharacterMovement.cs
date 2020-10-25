@@ -15,7 +15,7 @@ public class CharacterMovement : MonoBehaviour
     Vector3 movementAxis = new Vector3();
     CharacterController controller;
     PlayerInput playerInput;
-    Animator anim;
+    public Animator anim { get; private set; }
 
     #region Unity
     private void Start()
@@ -51,6 +51,11 @@ public class CharacterMovement : MonoBehaviour
         movementAxis.z = axis.y * speed;
     }
 
-
+    public void CinematicMove(Transform pos)
+    {
+        anim.SetFloat("speed", speed);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(pos.position.WithY(0) - transform.position.WithY(0)), angularSpeed * Time.deltaTime);
+        controller.Move((pos.position - transform.position).normalized * Time.deltaTime * speed);
+    }
 
 }
