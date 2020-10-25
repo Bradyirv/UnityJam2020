@@ -10,8 +10,13 @@ public class ConfessionTrigger : MonoBehaviour, IInteractable
     Transform entryPosition;
     [SerializeField]
     Transform sitPosition;
-    [SerializeField]
     ConfessionManager manager;
+
+    private void Start()
+    {
+        manager = FindObjectOfType<ConfessionManager>();
+        if (manager == null) Debug.LogError("No Confession Manager found in scene, please add one");
+    }
 
     public void Interact()
     {
