@@ -9,7 +9,6 @@ public class Bell : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        Debug.Log("Bell");
         source.PlayOneShot(sound);
         AIManager.instance.CalledForNextAI();
     }
