@@ -144,6 +144,7 @@ GameObject:
   - component: {fileID: 303705281}
   - component: {fileID: 303705280}
   - component: {fileID: 109576012}
+  - component: {fileID: 8631304679172301216}
   m_Layer: 0
   m_Name: AIPrefab
   m_TagString: Untagged
@@ -344,6 +345,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!136 &8631304679172301216
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4910030663666908762}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.3
+  m_Height: 1.8
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.9, z: 0}
 --- !u!1 &5134797513004936331
 GameObject:
   m_ObjectHideFlags: 0

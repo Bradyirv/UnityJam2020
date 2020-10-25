@@ -81,6 +81,13 @@ public class AIManager : MonoBehaviour
                 SetActiveAI();
             }
         }
+
+        ConfessionManager.onConfessionFinish += CompleteCurrentAIPrayer;
+    }
+
+    private void OnDestroy()
+    {
+        ConfessionManager.onConfessionFinish -= CompleteCurrentAIPrayer;
     }
 
     private void Update()
@@ -102,6 +109,7 @@ public class AIManager : MonoBehaviour
             CompleteCurrentAIPrayer();
             currentPrayerCompleted = false;
         }
+
     }
 
     public void SpawnAI()
