@@ -20,6 +20,7 @@ public class ConfessionTrigger : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        if (manager == null) return;
         if (manager.aiRef != null) manager.ConfessionStart(sitPosition, entryPosition);
     }
 }

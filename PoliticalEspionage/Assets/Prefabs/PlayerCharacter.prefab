@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  angularSpeed: 400
+  angularSpeed: 150
 --- !u!114 &1848244954368158884
 MonoBehaviour:
   m_ObjectHideFlags: 0

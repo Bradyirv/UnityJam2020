@@ -26,8 +26,9 @@ public class CharacterMovement : MonoBehaviour
     }
     void Update()
     {
-        controller.Move(movementAxis * Time.deltaTime);
-        if(movementAxis.WithY(0).sqrMagnitude > 0) transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(movementAxis.WithY(0)), angularSpeed * Time.deltaTime);
+        controller.Move(transform.forward * movementAxis.z * Time.deltaTime);
+        transform.Rotate(Vector3.up * movementAxis.x * Time.deltaTime);
+        //if(movementAxis.WithY(0).sqrMagnitude > 0) transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(movementAxis.WithY(0)), angularSpeed * Time.deltaTime);
     }
     private void OnEnable()
     {
@@ -46,8 +47,8 @@ public class CharacterMovement : MonoBehaviour
     void HandleAction(InputAction.CallbackContext context)
     {
         Vector2 axis = context.action.ReadValue<Vector2>();
-        anim.SetFloat("speed", axis.sqrMagnitude);
-        movementAxis.x = axis.x * speed;
+        anim.SetFloat("speed", axis.y);
+        movementAxis.x = axis.x * angularSpeed;
         movementAxis.z = axis.y * speed;
     }
 
