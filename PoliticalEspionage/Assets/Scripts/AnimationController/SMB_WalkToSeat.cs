@@ -24,7 +24,8 @@ public class SMB_WalkToSeat : StateMachineBehaviour
 
         // Confession Node
         targetC = AIManager.instance.confessionSeatLocation;
-        me.agent.destination = targetA.position;
+
+        if(me.agent.isOnNavMesh) me.agent.destination = targetA.position;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -38,7 +39,7 @@ public class SMB_WalkToSeat : StateMachineBehaviour
                 {
                     if (Vector3.Distance(me.transform.position, me.agent.pathEndPosition) < 0.2f)
                     {
-                        me.agent.destination = targetB.position;
+                        if (me.agent.isOnNavMesh) me.agent.destination = targetB.position;
                         AComplete = true;
                     }
                 }
@@ -56,13 +57,14 @@ public class SMB_WalkToSeat : StateMachineBehaviour
                 me.agent.destination = targetC.position;
                 if (Vector3.Distance(me.transform.position, me.agent.pathEndPosition) < 0.2f)
                 {
+                    me.transform.forward = targetB.forward;
                     animator.SetTrigger("NextState");
                 }
             }
         }
         else
         {
-            me.agent.destination = AIManager.instance.AISpawnLocation.position;
+            if (me.agent.isOnNavMesh) me.agent.destination = AIManager.instance.AISpawnLocation.position;
             if (Vector3.Distance(me.transform.position, me.agent.pathEndPosition) < 0.2f)
             {
                 AIManager.instance.Dispose(me);
