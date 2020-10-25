@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1451356649
 Transform:
   m_ObjectHideFlags: 0
@@ -4802,7 +4802,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2964384555186678029
 Transform:
   m_ObjectHideFlags: 0
@@ -4948,7 +4948,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1451356648}
+      - m_Target: {fileID: 2964384555186678028}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -4965,17 +4965,6 @@ MonoBehaviour:
       - m_Target: {fileID: 0}
         m_MethodName: set_aiRef
         m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1451356648}
-        m_MethodName: SetActive
-        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5075,6 +5064,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2964384557218102125}
+  - component: {fileID: 3868119925658215541}
   m_Layer: 0
   m_Name: Confession Booth
   m_TagString: Untagged
@@ -5100,6 +5090,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3868119925658215541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2964384557218102124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94dafced76afaef44afe3369cf102c28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onConfessionStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2964384555186678028}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onConfessionEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1637784564382785974
 PrefabInstance:
   m_ObjectHideFlags: 0

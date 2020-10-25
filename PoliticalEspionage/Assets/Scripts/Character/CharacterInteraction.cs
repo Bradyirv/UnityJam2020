@@ -7,7 +7,9 @@ using UnityEngine.InputSystem;
 using Daybrayk;
 public class CharacterInteraction : MonoBehaviour
 {
-    public UnityEventBool onInteractTarget;
+    [SerializeField]
+    GameObject interactVisrep;
+
     IInteractable interactionTarget;
     PlayerInput playerInput;
     private void OnEnable()
@@ -23,7 +25,11 @@ public class CharacterInteraction : MonoBehaviour
 
     void HandleAction(InputAction.CallbackContext context)
     {
-        if (context.action.phase == InputActionPhase.Started && interactionTarget != null) interactionTarget.Interact();
+        if (context.action.phase == InputActionPhase.Started && interactionTarget != null)
+        {
+            interactionTarget.Interact();
+            interactVisrep.SetActive(false);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -33,7 +39,7 @@ public class CharacterInteraction : MonoBehaviour
         if (interactable != null)
         {
             interactionTarget = interactable;
-            onInteractTarget.TryInvoke(true);
+            interactVisrep.SetActive(true);
         }
     }
 
@@ -44,7 +50,7 @@ public class CharacterInteraction : MonoBehaviour
         if (interactable != null)
         {
             interactionTarget = null;
-            onInteractTarget.TryInvoke(false);
+            interactVisrep.SetActive(false);
         }
     }
 }
