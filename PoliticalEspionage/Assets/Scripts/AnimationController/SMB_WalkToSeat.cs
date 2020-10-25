@@ -27,7 +27,7 @@ public class SMB_WalkToSeat : StateMachineBehaviour
         // Confession Node
         targetC = AIManager.instance.confessionSeatLocation;
 
-        if(me.agent.isOnNavMesh) me.agent.destination = targetA.position;
+        if(me.agent.isOnNavMesh) me.agent.SetDestination(targetA.position);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -39,16 +39,17 @@ public class SMB_WalkToSeat : StateMachineBehaviour
             {
                 if(AComplete == false)
                 {
-                    if (Vector3.Distance(me.transform.position, me.agent.pathEndPosition) < 0.2f)
+                    if (me.agent.destination != targetA.position) me.agent.destination = targetA.position;
+                    if (Vector3.Distance(me.transform.position, me.agent.destination) < 0.2f)
                     {
                         Debug.Log("Animator state trigger from TO Bench");
-                        if (me.agent.isOnNavMesh) me.agent.destination = targetB.position;
                         AComplete = true;
                     }
                 }
                 else if (BComplete == false)
                 {
-                    if (Vector3.Distance(me.transform.position, me.agent.pathEndPosition) < 0.2f)
+                    if (me.agent.destination != targetB.position) me.agent.SetDestination(targetB.position);
+                    if (Vector3.Distance(me.transform.position, me.agent.destination) < 0.2f)
                     {
                         Debug.Log("Animator state trigger from TO Seat");
                         me.transform.forward = targetB.forward;
@@ -59,11 +60,11 @@ public class SMB_WalkToSeat : StateMachineBehaviour
             }
             else if(CComplete == false)
             {
-                me.agent.destination = targetC.position;
-                if (Vector3.Distance(me.transform.position, me.agent.pathEndPosition) < 0.2f)
+                if(me.agent.destination != targetC.position) me.agent.SetDestination(targetC.position);
+                if (Vector3.Distance(me.transform.position, me.agent.destination) < 0.2f)
                 {
                     Debug.Log("Animator state trigger from TO Confession");
-                    me.transform.forward = targetB.forward;
+                    me.transform.forward = targetC.forward;
                     animator.SetTrigger("NextState");
                     CComplete = true;
                 }

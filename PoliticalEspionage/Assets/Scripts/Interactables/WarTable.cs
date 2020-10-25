@@ -19,6 +19,9 @@ public class WarTable : MonoBehaviour, IInteractable
         //Calc fill
         float fill = (float)currentSecrets.Value / (float)targetSecrets;
         secretsBar.fillAmount = fill;
+
+        Debug.Log(currentSecrets.Value + "/" + targetSecrets);
+        Debug.Log(fill);
     }
 
     public void Interact()

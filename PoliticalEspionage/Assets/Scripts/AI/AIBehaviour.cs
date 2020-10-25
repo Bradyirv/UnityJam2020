@@ -54,7 +54,7 @@ public class AIBehaviour : MonoBehaviour
     public void Init()
     {
         // Set Namebar
-        NameGUI.text = myInformation.first + " " + myInformation.last + "\nof " + myInformation.clan;
+        NameGUI.text = myInformation.first + " " + myInformation.last + "\nof Clan " + myInformation.clan;
         // Set Character model and material
         int r = Random.Range(0, 5);
         models[r].SetActive(true);
@@ -70,7 +70,7 @@ public class AIBehaviour : MonoBehaviour
     {
         calledForPrayer = true;
         anim.ResetTrigger("NextState");
-        if(!anim.GetCurrentAnimatorStateInfo(0).IsName("GoToSeat"))anim.SetTrigger("NextState");
+        if (!anim.GetCurrentAnimatorStateInfo(0).IsName("GoToSeat")) anim.SetTrigger("NextState");
     }
 
     public void CompletedPrayer()
