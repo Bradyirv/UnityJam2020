@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+using Daybrayk;
 public class CharacterMovement : MonoBehaviour
 {
     [Header("Movement")]
@@ -10,12 +11,13 @@ public class CharacterMovement : MonoBehaviour
     float speed;
     [SerializeField]
     float angularSpeed;
-    Vector3 movementAxis = new Vector3();
 
+    Vector3 movementAxis = new Vector3();
     CharacterController controller;
     PlayerInput playerInput;
     Animator anim;
 
+    #region Unity
     private void Start()
     {
         anim = GetComponentInChildren<Animator>();
@@ -27,14 +29,6 @@ public class CharacterMovement : MonoBehaviour
         controller.Move(movementAxis * Time.deltaTime);
         if(movementAxis.WithY(0).sqrMagnitude > 0) transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(movementAxis.WithY(0)), angularSpeed * Time.deltaTime);
     }
-    void HandleAction(InputAction.CallbackContext context)
-    {
-        Vector2 axis = context.action.ReadValue<Vector2>();
-        anim.SetFloat("speed", axis.sqrMagnitude);
-        movementAxis.x = axis.x * speed;
-        movementAxis.z = axis.y * speed;
-    }
-
     private void OnEnable()
     {
         if (playerInput == null) playerInput = GetComponent<PlayerInput>();
@@ -47,6 +41,16 @@ public class CharacterMovement : MonoBehaviour
         playerInput.actions.FindAction("Move").performed -= HandleAction;
         playerInput.actions.FindAction("Move").canceled -= HandleAction;
     }
+    #endregion
+
+    void HandleAction(InputAction.CallbackContext context)
+    {
+        Vector2 axis = context.action.ReadValue<Vector2>();
+        anim.SetFloat("speed", axis.sqrMagnitude);
+        movementAxis.x = axis.x * speed;
+        movementAxis.z = axis.y * speed;
+    }
+
 
 
 }
