@@ -41535,7 +41535,7 @@ MonoBehaviour:
     clan: Tyr
     timesVisited: 0
   maxAI: 20
-  spawnTimer: 10
+  spawnTimer: 8
 --- !u!4 &1633761523
 Transform:
   m_ObjectHideFlags: 0

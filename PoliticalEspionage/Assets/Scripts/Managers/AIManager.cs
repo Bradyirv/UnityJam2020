@@ -114,18 +114,18 @@ public class AIManager : MonoBehaviour
             currentPrayerCompleted = false;
         }
 
-        //if(waitingAI.Count != maxAI)
-        //{
-        //    if(timeSinceLast >= spawnTimer)
-        //    {
-        //        timeSinceLast = 0;
-        //        SetActiveAI();
-        //    }
-        //    else
-        //    {
-        //        timeSinceLast += Time.deltaTime;
-        //    }
-        //}
+        if (waitingAI.Count != maxAI)
+        {
+            if (timeSinceLast >= spawnTimer)
+            {
+                timeSinceLast = 0;
+                SetActiveAI();
+            }
+            else
+            {
+                timeSinceLast += Time.deltaTime;
+            }
+        }
     }
 
     public void SpawnAI()
