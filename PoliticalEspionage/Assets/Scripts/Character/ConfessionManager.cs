@@ -20,6 +20,7 @@ public class ConfessionManager : MonoBehaviour
     private void Start()
     {
         root = FindObjectOfType<CharacterRoot>();
+        secretAccumulator.Value = 0;
     }
 
     public void ConfessionStart(Transform sitPos, Transform enterPos)
