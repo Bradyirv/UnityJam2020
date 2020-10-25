@@ -20,7 +20,6 @@ public class ConfessionCurtain : MonoBehaviour
     {
         originalScale = Curtain.localScale;
         targetScale = new Vector3(targetScaleX, Curtain.localScale.y, Curtain.localScale.z);
-        Debug.Log(targetScale);
     }
 
     public void OpenCurtain()

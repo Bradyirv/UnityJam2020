@@ -7,6 +7,7 @@ public class TorchWarRoom : MonoBehaviour, IInteractable
     public Transform SecretWall;
     public Transform targetPosition;
     public Vector3 originalPosition;
+    public AudioSource source;
     public float speed = 1f;
 
     bool isOpen;
@@ -17,7 +18,11 @@ public class TorchWarRoom : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        if (isOpen == false) isOpen = true;
+        if (Vector3.Distance(SecretWall.position, originalPosition) <= 0.1f)
+        {
+            source.Play();
+            isOpen = true;
+        }
     }
 
     private void Start()
@@ -29,13 +34,14 @@ public class TorchWarRoom : MonoBehaviour, IInteractable
     {
         if(isOpen)
         {
-            if(Vector3.Distance(SecretWall.position, targetPosition.position) < 0.5f)
+            if(Vector3.Distance(SecretWall.position, targetPosition.position) < 0.1f)
             {
                 if (timeOpen >= stayOpen)
                 {
                     timeOpen = 0;
                     isOpen = false;
                     moveToOriginalPosition = true;
+                    source.Play();
                 }
                 else
                 {
@@ -49,7 +55,7 @@ public class TorchWarRoom : MonoBehaviour, IInteractable
         }
         else if(moveToOriginalPosition)
         {
-            if (Vector3.Distance(SecretWall.position, originalPosition) <= 0.01f)
+            if (Vector3.Distance(SecretWall.position, originalPosition) <= 0.1f)
             {
                 moveToOriginalPosition = false;
             }
