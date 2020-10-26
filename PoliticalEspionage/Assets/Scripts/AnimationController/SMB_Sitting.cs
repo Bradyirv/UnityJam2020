@@ -21,17 +21,20 @@ public class SMB_Sitting : StateMachineBehaviour
     {
         if(!triggeredAndRageQuitting)
         {
-            if(timeWaiting > timeToWait)
+            if(me.calledForPrayer == false)
             {
-                me.madePrayer = true;
-                AIManager.instance.waitingAI.Remove(me);
+                if(timeWaiting > timeToWait)
+                {
+                    me.madePrayer = true;
+                    AIManager.instance.waitingAI.Remove(me);
 
-                triggeredAndRageQuitting = true;
-                animator.SetTrigger("NextState");
-            }
-            else
-            {
-                timeWaiting += Time.deltaTime;
+                    triggeredAndRageQuitting = true;
+                    animator.SetTrigger("NextState");
+                }
+                else
+                {
+                    timeWaiting += Time.deltaTime;
+                }
             }
         }
     }
