@@ -173,7 +173,8 @@ public class AIManager : MonoBehaviour
             }
             else
             {
-                currentAI = waitingAI[0];
+                int r = Random.Range(0, waitingAI.Count);
+                currentAI = waitingAI[r];
                 currentAI.callForPrayer();
                 waitingAI.Remove(currentAI);
                 return true;
