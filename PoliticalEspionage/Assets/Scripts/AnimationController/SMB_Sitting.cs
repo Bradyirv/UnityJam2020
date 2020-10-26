@@ -14,6 +14,7 @@ public class SMB_Sitting : StateMachineBehaviour
     {
         me = animator.GetComponent<AIBehaviour>();
         timeToWait = Random.Range(30,90);
+        timeWaiting = 0;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -25,6 +26,8 @@ public class SMB_Sitting : StateMachineBehaviour
             {
                 if(timeWaiting > timeToWait)
                 {
+                    Debug.Log("Leave Church: " + me.myInformation.first + " " + me.myInformation.last);
+
                     me.madePrayer = true;
                     AIManager.instance.waitingAI.Remove(me);
 
