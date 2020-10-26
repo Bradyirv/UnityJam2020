@@ -9,6 +9,7 @@ public class WarTable : MonoBehaviour, IInteractable
 {
     [Header("Setup")]
     public Image secretsBar;
+    public GameObject menu;
 
     [Header("Game Variables")]
     public int targetSecrets;
@@ -20,8 +21,10 @@ public class WarTable : MonoBehaviour, IInteractable
         float fill = (float)currentSecrets.Value / (float)targetSecrets;
         secretsBar.fillAmount = fill;
 
-        Debug.Log(currentSecrets.Value + "/" + targetSecrets);
-        Debug.Log(fill);
+        if(currentSecrets.Value == 10)
+        {
+            menu.SetActive(true);
+        }
     }
 
     public void Interact()
