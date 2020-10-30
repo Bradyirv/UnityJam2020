@@ -61,7 +61,7 @@ public class ConfessionManager : MonoBehaviour
 
     IEnumerator ExitConfessionHelper(Transform pos)
     {
-        while (Vector3.Distance(root.transform.position.WithY(0), pos.position.WithY(0)) > 0.1f)
+        while (Vector3.Distance(root.transform.position.WithY(0), pos.position.WithY(0)) > 0.25f)
         {
             root.movement.CinematicMove(pos);
             yield return new WaitForSeconds(Time.deltaTime);

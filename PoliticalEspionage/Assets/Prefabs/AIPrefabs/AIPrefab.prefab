@@ -153,7 +153,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4910030663666908763}
   - component: {fileID: 303705279}
-  - component: {fileID: 3396231222575584645}
   - component: {fileID: 303705281}
   - component: {fileID: 303705280}
   - component: {fileID: 109576012}
@@ -217,21 +216,6 @@ MonoBehaviour:
   madePrayer: 0
   left: 0
   mySeat: -1
---- !u!114 &3396231222575584645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4910030663666908762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 447c5fbdd51b29741ae68a1825e7a09c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    npcName: 
-    sentences: []
 --- !u!95 &303705281
 Animator:
   serializedVersion: 3

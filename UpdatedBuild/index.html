@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Rise of Odin</title>
+	<style> body { background-image: url('parchment.jpg'); background-size: cover;} </style>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/UpdatedBuild.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+  <body>
+	<div class="webgl-content">
+	  <div id="unityContainer" style="display: block; height: 600px; width: 960px;"></div>
+	  <div class="footer">
+		<div class="webgl-logo"></div>
+		<div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+		<div class="title">UnityJam2020</div>
+	  </div>
+	  <br> <p><b> Note: </b> This build has some quality of life improvements from the original jam submission. </p>
+	  <br> <p><b> Back to Jam Submission: </b> <a href="http://unityjam2020.bradyirvine.com/" target="_blank"> Original Build </a></p>
+	  <br> <p><b>Meet the devs:</b></p>
+	  <li>Brady Irvine: <a href="https://www.linkedin.com/in/bradyirv/" target="_blank">LinkedIn</a> / <a href="http://bradyirvine.com/index.html" target="_blank">Website</a></li>
+	  <li>Braydon Johnson: <a href="https://www.linkedin.com/in/braydonjohnson/" target="_blank">LinkedIn</a> / <a href="https://www.braydonj.com/" target="_blank">Website</a></li>
+	  <br><p><b> Bugs: </b></p>
+	  <li><b>[Workaround] </b> The bell can be rung at any time </li>
+	  <li><b>[Fix] </b>The AI won't leave the booth before confession has been made </li>
+	  <li><b>[Performance] </b> Added static batching (and some other things) to try and improve frame rate </li>
+	  <br> <p><b> Mechanics still Excluded: </b><br><b>[Warning] Possible secret spoiler !!</b></p>
+	  <li>During confession there would be a complex dialogue system to which you could hear what troubles the clan members </li>
+	  <li>Based on clan secrets collected you would be able to 'spend' those secrets to increase the reach of Odin's domain </li>
+	  <li>AI would have inspection locations to admire the art, statues and decor. While admiring, they would be on the lookout for you entering the War Room and react if caught submitting clan secrets</li>
+	  <br><br><br><br>
+	</div>
+  </body>
+</html>
